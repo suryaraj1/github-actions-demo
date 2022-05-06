@@ -1,0 +1,29 @@
+# yaml is a bit more readable key value pair stuff like json
+# indentation is very important when coding YAML
+# indent in yaml with spaces and not using "tabs"
+name: Max
+age: 22
+address: "38 south end park"
+key: 
+    key: value
+    key2: 29
+    key3:
+        key: value
+        key2: value
+jsonObject: {key: value, key2: 2, key3: { key: value, key2: value }}
+array:
+    - item1
+    - item2
+    - item3
+    - { key: value }
+jsonArray: [item1, item2, item3]
+objectsArray:
+    - key: value
+      key2: value2
+      key3: value3
+    - key: value
+      key4: value4
+longText: |
+    hello world this is suryaraj
+    but he's coding YAML today
+    hello Andreas 
