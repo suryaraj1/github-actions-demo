@@ -12,3 +12,9 @@ jobs:
           print(platform.processor())
           print(2 + 2)
         shell: python
+  check-node-version:
+    runs-on: ubuntu-latest
+    needs: ["print-something-in-python"]
+    steps:
+      - name: List node version installed
+        run: node --version
