@@ -3,7 +3,7 @@ name: Sample Workflow
 on: [push]
 
 jobs:
-  "print-something-in-python":
+  print-something-in-python:
     runs-on: ubuntu-latest
     steps:
       - name: Print Hello world in Python
@@ -11,3 +11,4 @@ jobs:
           import platform
           print(platform.processor())
           print(2 + 2)
+        shell: python
