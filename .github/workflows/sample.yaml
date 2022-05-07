@@ -18,3 +18,9 @@ jobs:
     steps:
       - name: List node version installed
         run: node --version
+      - name: Checkout to commit branch
+        uses: actions/checkout@v1
+      - name: List files after Checkout
+        run: |
+          pwd
+          ls
