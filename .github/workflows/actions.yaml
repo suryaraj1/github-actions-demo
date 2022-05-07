@@ -15,7 +15,7 @@ jobs:
       - name: List Files after Checkout
         run: |
           pwd
-          ls -a 
+          ls 
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
