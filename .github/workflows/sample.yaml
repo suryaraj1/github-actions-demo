@@ -24,3 +24,10 @@ jobs:
         run: |
           pwd
           ls
+  some-random-job:
+    runs-on: windows-2019
+    needs: ["print-something-in-python"]
+    steps:
+      - name: "List files in powershell"
+        run: ls
+        shell: powershell
