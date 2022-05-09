@@ -1,6 +1,21 @@
 name: Actions Workflow
 
-on: [push, pull_request]
+on: 
+  push:
+    branches:
+      - master
+      - 'feature/*'
+      - 'feature/**'
+    tags:
+      - v1.*
+    paths:
+      - '**.js'
+  # # schedule:
+  # #   - cron: "0/5 * * * *"
+  # # push:
+  # pull_request:
+  #   types: [closed, assigned, opened, reopened]
+
 
 jobs: 
   "run-github-actions":
@@ -15,7 +30,7 @@ jobs:
       - name: List Files after Checkout
         run: |
           pwd
-          ls -a 
+          ls 
       - name: Simple JS Action
         id: greet
         uses: actions/hello-world-javascript-action@v1
